@@ -1,0 +1,54 @@
+/*-- scss:defaults --*/
+
+
+/*-- scss:defaults --*/
+
+/* This must remain at the top of this file.                 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+
+$font-size-root: 18px !default;
+
+// Base document colors
+$link-color: #357bcc;
+$primary:  #06436e !default;
+
+// $headings-font-family:  'PT Serif' !default;
+
+/*-- scss:rules --*/
+
+.sidebar-title {
+  color: #637238;
+}
+
+div.sidebar-item-container .active {
+  font-weight: bold;
+}
+
+.sidebar nav[role=doc-toc] ul>li>a.active, .sidebar nav[role=doc-toc] ul>li>ul>li>a.active{
+  font-weight: bold;
+}
+
+.layout-example {
+  background: $gray-600;
+  color: $white;
+  text-align: center;
+  margin-bottom: 1em;
+  font-family: $font-family-monospace;
+  font-size: .875em;
+  font-weight: 600;
+  padding-top: 1em;
+  border-radius: 3px;
+}
+
+.left {
+  text-align: left;
+  padding-left: 1em;
+}
+
+.right {
+  text-align: right;
+  padding-right: 1em;
+}

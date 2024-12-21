@@ -1,0 +1,173 @@
+---
+title: "Geospatial Data Science"
+---
+
+```{r setup}
+#| echo: false
+#| warning: false
+#| include: false
+
+library(tidyverse)
+library(magrittr)
+library(htmltools)
+library(reactable)
+library(readxl)
+
+# русификация reactable таблиц
+# options(reactable.language = reactableLang(
+#   pageSizeOptions   = "показано {rows}",
+#   pageInfo          = "с {rowStart} по {rowEnd} из {rows}",
+#   pagePrevious      = "назад",
+#   pageNext          = "вперед",
+#   searchPlaceholder = "Поиск...",
+#   noData            = "Значения не найдены"
+# ))
+
+# reactableLang(
+#   sortLabel = "Сортировать {name}",
+#   filterPlaceholder = "",
+#   filterLabel = "Фильтровать {name}",
+#   searchPlaceholder = "Найти",
+#   searchLabel = "Найти",
+#   noData = "Строки не найдены",
+#   pageNext = "Далее",
+#   pagePrevious = "Назад",
+#   pageNumbers = "{page} из {pages}",
+#   pageInfo = "{rowStart}\u2013{rowEnd} из {rows} строк",
+#   pageSizeOptions = "Показать {rows}",
+#   pageNextLabel = "Следующая страница",
+#   pagePreviousLabel = "Предыдущая страница",
+#   pageNumberLabel = "Страница {page}",
+#   pageJumpLabel = "Перейти на страницу",
+#   pageSizeOptionsLabel = "Строк на странице",
+#   groupExpandLabel = "Группировка",
+#   detailsExpandLabel = "Детальный вид",
+#   selectAllRowsLabel = "Выбрать все строки",
+#   selectAllSubRowsLabel = "Выбрать все строки в группе",
+#   selectRowLabel = "Выбрать строку",
+#   defaultGroupHeader = NULL,
+#   detailsCollapseLabel = NULL,
+#   deselectAllRowsLabel = NULL,
+#   deselectAllSubRowsLabel = NULL,
+#   deselectRowLabel = NULL
+# )
+```
+
+::: {.column-page-inset-right}
+
+
+```{r}
+#| echo: false
+#| warning: false
+books_geocomp <- read_excel("../tables/books_geocomp.xlsx")
+
+reactable(
+  books_geocomp, 
+  filterable = TRUE,
+  showPageSizeOptions = TRUE, 
+  searchable = TRUE,
+  # подсветка при наведении на строку
+  highlight = TRUE,
+  # отстутствие границы между строками
+  borderless = FALSE,
+  # на всю ширину / фиксированная ширина
+  fullWidth = TRUE,
+  # исходное количество строк на странице
+  defaultPageSize = 10,
+  defaultSorted = "title",
+  #showSortable = TRUE,
+  columns = list(
+    lang = colDef(sortable = TRUE,
+                  searchable = FALSE,
+                  name = "Lang",
+                  maxWidth = 110,
+                    filterInput = function(values, name) {
+        tags$select(
+          # Set to undefined to clear the filter
+          onchange = sprintf("Reactable.setFilter('lang-select', '%s', event.target.value || undefined)", name),
+          # "All" has an empty value to clear the filter, and is the default option
+          tags$option(value = "", "All"),
+          lapply(unique(values), tags$option),
+          "aria-label" = sprintf("Filter %s", name),
+          style = "width: 100%; height: 28px;"
+        )
+      },
+                  cell = function(value) {
+                  class <- paste0("tag language-", gsub("[[:space:]]", "", tolower(value)))
+                  div(class = class, value)
+                  }), 
+    link = colDef(show = FALSE),
+    title = colDef(
+      name = "Title",
+      html = TRUE, 
+      cell = function(value, index) {
+      sprintf('<a href="%s" target="_blank">%s</a>', books_geocomp$link[index], value)
+      }
+    ),
+    author = colDef(
+      sortable = FALSE,
+      resizable = TRUE,
+      cell = function(value) {
+        div(class = "authors", value)
+      },
+      name = "Author"
+      #maxWidth = 240
+    )
+  ),
+  defaultColDef = colDef(
+    style = JS("function(rowInfo, column, state) {
+      // Highlight sorted columns
+      for (let i = 0; i < state.sorted.length; i++) {
+        if (state.sorted[i].id === column.id) {
+          return {  }
+        }
+      }
+    }")
+   ),
+  elementId = "lang-select",
+  theme = reactableTheme(
+    headerStyle = list(
+      "&:hover[aria-sort]" = list(background = "hsl(0, 0%, 96%)"),
+      "&[aria-sort='ascending'], &[aria-sort='descending']" = list(background = "hsl(0, 0%, 96%)"),
+      borderColor = "#555"
+    )
+  )
+)
+```
+
+```{css, echo=FALSE}
+
+.tag {
+  display: inline-block;
+  padding: 0.125rem 0.75rem;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.authors {
+  display: inline-block;
+  /* padding: 0.125rem 0.75rem; */
+  /* border-radius: 15px; */
+  /* font-weight: 600; */
+  font-size: 0.95rem;
+}
+
+.language-r {
+  background: hsl(208, 100%, 80%);
+  color: hsl(211, 12%, 30%);
+}
+
+.language-python {
+  background: hsl(44, 90%, 80%);
+  color: hsl(211, 12%, 30%);
+}
+
+.language-julia {
+  background: hsl(12, 90%, 90%);
+  color: hsl(211, 12%, 30%);
+}
+```
+
+
+:::

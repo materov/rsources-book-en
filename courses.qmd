@@ -1,0 +1,202 @@
+---
+title: "Courses"
+---
+
+::: {.column-page-inset-right}
+
+```{r setup}
+#| echo: false
+#| warning: false
+#| include: false
+
+library(tidyverse)
+library(magrittr)
+library(htmltools)
+library(reactable)
+library(readxl)
+
+# русификация reactable таблиц
+# options(reactable.language = reactableLang(
+#   pageSizeOptions   = "показано {rows}",
+#   pageInfo          = "с {rowStart} по {rowEnd} из {rows}",
+#   pagePrevious      = "назад",
+#   pageNext          = "вперед",
+#   searchPlaceholder = "Поиск...",
+#   noData            = "Значения не найдены"
+# ))
+
+# reactableLang(
+#   sortLabel = "Сортировать {name}",
+#   filterPlaceholder = "",
+#   filterLabel = "Фильтровать {name}",
+#   searchPlaceholder = "Найти",
+#   searchLabel = "Найти",
+#   noData = "Строки не найдены",
+#   pageNext = "Далее",
+#   pagePrevious = "Назад",
+#   pageNumbers = "{page} из {pages}",
+#   pageInfo = "{rowStart}\u2013{rowEnd} из {rows} строк",
+#   pageSizeOptions = "Показать {rows}",
+#   pageNextLabel = "Следующая страница",
+#   pagePreviousLabel = "Предыдущая страница",
+#   pageNumberLabel = "Страница {page}",
+#   pageJumpLabel = "Перейти на страницу",
+#   pageSizeOptionsLabel = "Строк на странице",
+#   groupExpandLabel = "Группировка",
+#   detailsExpandLabel = "Детальный вид",
+#   selectAllRowsLabel = "Выбрать все строки",
+#   selectAllSubRowsLabel = "Выбрать все строки в группе",
+#   selectRowLabel = "Выбрать строку",
+#   defaultGroupHeader = NULL,
+#   detailsCollapseLabel = NULL,
+#   deselectAllRowsLabel = NULL,
+#   deselectAllSubRowsLabel = NULL,
+#   deselectRowLabel = NULL
+# )
+```
+
+```{r}
+#| echo: false
+#| warning: false
+courses <- read_excel("tables/courses.xlsx")
+
+courses$type <- factor(courses$type,
+                             labels = c("DataViz", "Data Science", "Workshop", "GeoData", 
+                                        "ML", "Ecology", "Bio", "Survival", "Stat"),
+                             levels = c("DataViz", "Data Science", "Workshop", "GeoData", 
+                                        "ML", "Ecology", "Bio", "Survival", "Stat"))
+
+courses2 <- courses |> arrange(type, title)
+
+reactable(
+  courses2, 
+  filterable = TRUE,
+  showPageSizeOptions = TRUE, 
+  searchable = TRUE,
+  # подсветка при наведении на строку
+  highlight = TRUE,
+  # отстутствие границы между строками
+  borderless = FALSE,
+  # на всю ширину / фиксированная ширина
+  fullWidth = TRUE,
+  # исходное количество строк на странице
+  defaultPageSize = 10,
+  #defaultSorted = "title",
+  #showSortable = TRUE,
+  columns = list( 
+    link = colDef(show = FALSE),
+    type = colDef(
+      name = "Category",
+                    filterInput = function(values, name) {
+        tags$select(
+          # Set to undefined to clear the filter
+          onchange = sprintf("Reactable.setFilter('type-select', '%s', event.target.value || undefined)", name),
+          # "All" has an empty value to clear the filter, and is the default option
+          tags$option(value = "", "All"),
+          lapply(unique(values), tags$option),
+          "aria-label" = sprintf("Filter %s", name),
+          style = "width: 100%; height: 28px;"
+        )
+      },
+      cell = function(value) {
+                    class <- paste0("tag course-type-", gsub("[[:space:]]", "", tolower(value)))
+                    div(class = class, value) # "tag course-type"
+                    },
+      maxWidth = 150,
+      sortable = FALSE),
+    title = colDef(
+      name = "Title",
+      sortable = FALSE,
+      html = TRUE, 
+      cell = function(value, index) {
+      sprintf('<a href="%s" target="_blank">%s</a>', courses2$link[index], value)
+      }
+    ),
+    author = colDef(
+      sortable = FALSE,
+      resizable = TRUE,
+      maxWidth = 280,
+      cell = function(value) {
+        div(class = "authors", value)
+      },
+      name = "Author"
+      #maxWidth = 240
+    )
+  ),
+  defaultColDef = colDef(
+    style = JS("function(rowInfo, column, state) {
+      // Highlight sorted columns
+      for (let i = 0; i < state.sorted.length; i++) {
+        if (state.sorted[i].id === column.id) {
+          return {  }
+        }
+      }
+    }")
+   ),
+  elementId = "type-select",
+  theme = reactableTheme(
+    headerStyle = list(
+      "&:hover[aria-sort]" = list(background = "hsl(0, 0%, 96%)"),
+      "&[aria-sort='ascending'], &[aria-sort='descending']" = list(background = "hsl(0, 0%, 96%)"),
+      borderColor = "#555"
+    )
+  )
+)
+```
+
+```{css, echo=FALSE}
+.tag {
+  display: inline-block;
+  padding: 0.125rem 0.75rem;
+  border-radius: 15px;
+  font-weight: 540;
+  font-size: 0.75rem;
+}
+
+.course-type-dataviz {
+  background: hsl(208, 50%, 86%);
+  color:hsl(211, 15%, 20%);
+}
+
+.course-type-datascience {
+  background: hsl(147, 90%, 90%);
+  color:hsl(211, 15%, 20%);
+}
+
+.course-type-workshop {
+  background: hsl(248, 90%, 90%);
+  color:hsl(211, 15%, 20%);
+}
+
+.course-type-geodata {
+  background: hsl(39, 90%, 90%);
+  color:hsl(211, 15%, 20%);
+}
+
+.course-type-ml {
+  background: hsl(0, 90%, 90%);
+  color:hsl(211, 15%, 20%);
+}
+
+.course-type-bio {
+  background: hsl(117, 90%, 90%);
+  color:hsl(211, 15%, 20%);
+}
+
+.course-type-ecology {
+  background: hsl(70, 90%, 90%);
+  color:hsl(211, 15%, 20%);
+}
+
+.course-type-stat {
+  background: hsl(304, 90%, 90%);
+  color:hsl(211, 15%, 20%);
+}
+
+.course-type-survival {
+  background: hsl(44, 90%, 90%);
+  color:hsl(211, 15%, 20%);
+}
+```
+
+:::

@@ -1,0 +1,120 @@
+---
+title: "DuboisChallenge"
+---
+
+::: {.column-page-inset-right}
+
+```{r setup}
+#| echo: false
+#| warning: false
+#| include: false
+
+library(tidyverse)
+library(magrittr)
+library(htmltools)
+library(reactable)
+library(readxl)
+
+# русификация reactable таблиц
+# options(reactable.language = reactableLang(
+#   pageSizeOptions   = "показано {rows}",
+#   pageInfo          = "с {rowStart} по {rowEnd} из {rows}",
+#   pagePrevious      = "назад",
+#   pageNext          = "вперед",
+#   searchPlaceholder = "Поиск...",
+#   noData            = "Значения не найдены"
+# ))
+
+# reactableLang(
+#   sortLabel = "Сортировать {name}",
+#   filterPlaceholder = "",
+#   filterLabel = "Фильтровать {name}",
+#   searchPlaceholder = "Найти",
+#   searchLabel = "Найти",
+#   noData = "Строки не найдены",
+#   pageNext = "Далее",
+#   pagePrevious = "Назад",
+#   pageNumbers = "{page} из {pages}",
+#   pageInfo = "{rowStart}\u2013{rowEnd} из {rows} строк",
+#   pageSizeOptions = "Показать {rows}",
+#   pageNextLabel = "Следующая страница",
+#   pagePreviousLabel = "Предыдущая страница",
+#   pageNumberLabel = "Страница {page}",
+#   pageJumpLabel = "Перейти на страницу",
+#   pageSizeOptionsLabel = "Строк на странице",
+#   groupExpandLabel = "Группировка",
+#   detailsExpandLabel = "Детальный вид",
+#   selectAllRowsLabel = "Выбрать все строки",
+#   selectAllSubRowsLabel = "Выбрать все строки в группе",
+#   selectRowLabel = "Выбрать строку",
+#   defaultGroupHeader = NULL,
+#   detailsCollapseLabel = NULL,
+#   deselectAllRowsLabel = NULL,
+#   deselectAllSubRowsLabel = NULL,
+#   deselectRowLabel = NULL
+# )
+```
+
+*[W. E. B. Du Bois](https://en.wikipedia.org/wiki/W._E._B._Du_Bois){target="_blank"}* is an American sociologist, socialist, historian and fighter for the civil rights of the black population, he was the first African American to receive a doctorate. Starting 2021, the goal of the *[Dubois Visualization Challenge](https://github.com/ajstarks/dubois-data-portraits/tree/master/challenge ){target="_blank"}* was to celebrate his data visualization legacy by recreating the visualizations showcased at the 1900 Paris Exposition using modern tools. The original works are recognizable, they contrast the lives of white and black Americans of that time, the drawings are hand-drawn, but carefully and accurately.
+
+```{r}
+#| echo: false
+#| warning: false
+DuboisChallenge <- read_excel("../tables/DuboisChallenge.xlsx")
+
+reactable(
+  DuboisChallenge, 
+  #filterable = TRUE,
+  showPageSizeOptions = TRUE, 
+  searchable = TRUE,
+  # подсветка при наведении на строку
+  highlight = TRUE,
+  # отстутствие границы между строками
+  borderless = FALSE,
+  # на всю ширину / фиксированная ширина
+  fullWidth = TRUE,
+  # исходное количество строк на странице
+  defaultPageSize = 12,
+  #defaultSorted = "title",
+  #showSortable = TRUE,
+  columns = list( 
+    link = colDef(show = FALSE),
+    title = colDef(
+      name = "Название",
+      sortable = FALSE,
+      html = TRUE, 
+      cell = function(value, index) {
+      sprintf('<a href="%s" target="_blank">%s</a>', DuboisChallenge$link[index], value)
+      }
+    ),
+    author = colDef(
+      sortable = FALSE,
+      resizable = TRUE,
+      cell = function(value) {
+        div(class = "authors", value)
+      },
+      name = "Автор"
+      #maxWidth = 240
+    )
+  ),
+  defaultColDef = colDef(
+    style = JS("function(rowInfo, column, state) {
+      // Highlight sorted columns
+      for (let i = 0; i < state.sorted.length; i++) {
+        if (state.sorted[i].id === column.id) {
+          return {  }
+        }
+      }
+    }")
+   ),
+  theme = reactableTheme(
+    headerStyle = list(
+      "&:hover[aria-sort]" = list(background = "hsl(0, 0%, 96%)"),
+      "&[aria-sort='ascending'], &[aria-sort='descending']" = list(background = "hsl(0, 0%, 96%)"),
+      borderColor = "#555"
+    )
+  )
+)
+```
+
+:::

@@ -1,0 +1,69 @@
+---
+title: "Useful links"
+---
+
+```{r setup}
+#| echo: false
+#| warning: false
+#| include: false
+
+library(tidyverse)
+library(magrittr)
+library(htmltools)
+library(reactable)
+library(readxl)
+```
+
+::: {.column-page-inset-right}
+
+```{r}
+#| echo: false
+#| warning: false
+big_links <- read_excel("../tables/links.xlsx")
+
+reactable(
+  big_links,
+  searchable = TRUE,
+  showPageSizeOptions = TRUE, 
+  # подсветка при наведении на строку
+  highlight = TRUE,
+  columns = list(
+    link = colDef(
+      #searchable = FALSE,
+      sortable = FALSE,
+      name = "Link",
+      html = TRUE, 
+      cell = function(value, index) {
+      sprintf('<a href="%s" target="_blank">%s</a>', big_links$link[index], value)
+      }
+    ),
+    title = colDef(
+      name = "Resource",
+      resizable = TRUE,
+      sortable = FALSE,
+      # Show species under character names
+      cell = function(value, index) {
+        species <- big_links$text[index]
+        species <- if (!is.na(text)) species else ""
+        div(
+          div(style = "font-weight: 800", value),
+          div(style = "font-size: 0.95rem", species)
+        )
+      }
+    ),
+    text = colDef(show = FALSE)
+  ),
+  # Vertically center cells
+  defaultColDef = colDef(vAlign = "center"),
+  defaultPageSize = 10,
+  theme = reactableTheme(
+    headerStyle = list(
+      "&:hover[aria-sort]" = list(background = "hsl(0, 0%, 96%)"),
+      "&[aria-sort='ascending'], &[aria-sort='descending']" = list(background = "hsl(0, 0%, 96%)"),
+      borderColor = "#555"
+    )
+  )
+)
+```
+
+:::

@@ -1,0 +1,105 @@
+---
+title: "30DayChartChallenge"
+---
+
+::: {.column-page-inset-right}
+
+```{r setup}
+#| echo: false
+#| warning: false
+#| include: false
+
+library(tidyverse)
+library(magrittr)
+library(htmltools)
+library(reactable)
+library(readxl)
+
+# русификация reactable таблиц
+# options(reactable.language = reactableLang(
+#   pageSizeOptions   = "показано {rows}",
+#   pageInfo          = "с {rowStart} по {rowEnd} из {rows}",
+#   pagePrevious      = "назад",
+#   pageNext          = "вперед",
+#   searchPlaceholder = "Поиск...",
+#   noData            = "Значения не найдены"
+# ))
+
+# reactableLang(
+#   sortLabel = "Сортировать {name}",
+#   filterPlaceholder = "",
+#   filterLabel = "Фильтровать {name}",
+#   searchPlaceholder = "Найти",
+#   searchLabel = "Найти",
+#   noData = "Строки не найдены",
+#   pageNext = "Далее",
+#   pagePrevious = "Назад",
+#   pageNumbers = "{page} из {pages}",
+#   pageInfo = "{rowStart}\u2013{rowEnd} из {rows} строк",
+#   pageSizeOptions = "Показать {rows}",
+#   pageNextLabel = "Следующая страница",
+#   pagePreviousLabel = "Предыдущая страница",
+#   pageNumberLabel = "Страница {page}",
+#   pageJumpLabel = "Перейти на страницу",
+#   pageSizeOptionsLabel = "Строк на странице",
+#   groupExpandLabel = "Группировка",
+#   detailsExpandLabel = "Детальный вид",
+#   selectAllRowsLabel = "Выбрать все строки",
+#   selectAllSubRowsLabel = "Выбрать все строки в группе",
+#   selectRowLabel = "Выбрать строку",
+#   defaultGroupHeader = NULL,
+#   detailsCollapseLabel = NULL,
+#   deselectAllRowsLabel = NULL,
+#   deselectAllSubRowsLabel = NULL,
+#   deselectRowLabel = NULL
+# )
+```
+
+*[30DayChartChallenge](https://github.com/30DayChartChallenge){target="_blank"}* is a monthly community challenge centered around data visualization.
+
+```{r}
+#| echo: false
+#| warning: false
+The330DayChartChallenge <- read_excel("../tables/30DayChartChallenge.xlsx")
+
+reactable(
+  The330DayChartChallenge, 
+  #filterable = TRUE, 
+  searchable = TRUE,
+  # подсветка при наведении на строку
+  highlight = TRUE,
+  # отстутствие границы между строками
+  borderless = FALSE,
+  # на всю ширину / фиксированная ширина
+  fullWidth = TRUE,
+  # исходное количество строк на странице
+  defaultPageSize = 12,
+  theme = reactableTheme(
+    headerStyle = list(
+      "&:hover[aria-sort]" = list(background = "hsl(0, 0%, 96%)"),
+      "&[aria-sort='ascending'], &[aria-sort='descending']" = list(background = "hsl(0, 0%, 96%)"),
+      borderColor = "#555"
+    )
+  ),
+  columns = list(
+    author = colDef(
+      #searchable = TRUE,
+      maxWidth = 300,
+      sortable = FALSE,
+      resizable = TRUE,
+      name = "Author"
+    ),
+    link = colDef(
+      #searchable = FALSE,
+      sortable = FALSE,
+      name = "Link",
+      html = TRUE, 
+      cell = function(value, index) {
+      sprintf('<a href="%s" target="_blank">%s</a>', The330DayChartChallenge$link[index], value)
+      }
+    )
+  )
+)
+```
+
+:::

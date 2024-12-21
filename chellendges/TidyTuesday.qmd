@@ -1,0 +1,104 @@
+---
+title: "TidyTuesday"
+---
+
+::: {.column-page-inset-right}
+
+```{r setup}
+#| echo: false
+#| warning: false
+#| include: false
+
+library(tidyverse)
+library(magrittr)
+library(htmltools)
+library(reactable)
+library(readxl)
+
+# русификация reactable таблиц
+# options(reactable.language = reactableLang(
+#   pageSizeOptions   = "показано {rows}",
+#   pageInfo          = "с {rowStart} по {rowEnd} из {rows}",
+#   pagePrevious      = "назад",
+#   pageNext          = "вперед",
+#   searchPlaceholder = "Поиск...",
+#   noData            = "Значения не найдены"
+# ))
+
+# reactableLang(
+#   sortLabel = "Сортировать {name}",
+#   filterPlaceholder = "",
+#   filterLabel = "Фильтровать {name}",
+#   searchPlaceholder = "Найти",
+#   searchLabel = "Найти",
+#   noData = "Строки не найдены",
+#   pageNext = "Далее",
+#   pagePrevious = "Назад",
+#   pageNumbers = "{page} из {pages}",
+#   pageInfo = "{rowStart}\u2013{rowEnd} из {rows} строк",
+#   pageSizeOptions = "Показать {rows}",
+#   pageNextLabel = "Следующая страница",
+#   pagePreviousLabel = "Предыдущая страница",
+#   pageNumberLabel = "Страница {page}",
+#   pageJumpLabel = "Перейти на страницу",
+#   pageSizeOptionsLabel = "Строк на странице",
+#   groupExpandLabel = "Группировка",
+#   detailsExpandLabel = "Детальный вид",
+#   selectAllRowsLabel = "Выбрать все строки",
+#   selectAllSubRowsLabel = "Выбрать все строки в группе",
+#   selectRowLabel = "Выбрать строку",
+#   defaultGroupHeader = NULL,
+#   detailsCollapseLabel = NULL,
+#   deselectAllRowsLabel = NULL,
+#   deselectAllSubRowsLabel = NULL,
+#   deselectRowLabel = NULL
+# )
+```
+
+*[TidyTuesday](https://github.com/rfordatascience/tidytuesday){target="_blank"}* is a social weekly information project that is aimed at the **R** ecosystem. Every week, a raw data set, a small accompanying chart and an article with a description are published on the project's website and on social networks. A perfect example of project visualization **TidyTuesday** is the *[dashboard](https://nrennie.rbind.io/tidytuesday-shiny-app/){target="_blank"}* made by *Nicola Rennie*.
+
+```{r}
+#| echo: false
+#| warning: false
+TidyTuesday <- read_excel("../tables/TidyTuesday.xlsx")
+
+reactable(
+  TidyTuesday, 
+  #filterable = TRUE, 
+  searchable = TRUE,
+  # подсветка при наведении на строку
+  highlight = TRUE,
+  # отстутствие границы между строками
+  borderless = FALSE,
+  # на всю ширину / фиксированная ширина
+  fullWidth = TRUE,
+  # исходное количество строк на странице
+  defaultPageSize = 12,
+  theme = reactableTheme(
+    headerStyle = list(
+      "&:hover[aria-sort]" = list(background = "hsl(0, 0%, 96%)"),
+      "&[aria-sort='ascending'], &[aria-sort='descending']" = list(background = "hsl(0, 0%, 96%)"),
+      borderColor = "#555"
+    )
+  ),
+  columns = list(
+    author = colDef(
+      #searchable = TRUE,
+      sortable = FALSE,
+      resizable = TRUE,
+      name = "Автор"
+    ),
+    link = colDef(
+      #searchable = FALSE,
+      sortable = FALSE,
+      name = "Ссылка",
+      html = TRUE, 
+      cell = function(value, index) {
+      sprintf('<a href="%s" target="_blank">%s</a>', TidyTuesday$link[index], value)
+      }
+    )
+  )
+)
+```
+
+:::

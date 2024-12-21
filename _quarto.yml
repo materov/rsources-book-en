@@ -1,0 +1,95 @@
+project:
+  type: book
+  preview:
+    port: 1111
+
+execute:
+  freeze: auto
+
+website: 
+  announcement: 
+    content: "useful links to Data Science and R resources"
+    icon: bookmarks
+    dismissable: false
+    position: below-navbar
+    type: light
+
+book:
+  title: "RSources"
+  favicon: fav.png
+  # https://make.orlybooks.com/
+  cover-image: orly-book-cover.png
+  repo-url: https://github.com/materov/rsources-book/
+  repo-actions: [issue]
+  sidebar:
+      collapse-level: 1
+  navbar:
+    # right:
+    #   - icon: telegram
+    #     href: https://t.me/naukaidannye
+    #     text: "канал Наука и данные"
+    background: "#2860a1"
+    #collapse-below: lg
+    logo: logo.jpeg
+  page-footer: 
+    left: '© {{< now year >}} &#10072; Evgeny Materov &#10072; {{< fa brands telegram >}} Telegram [Наука и данные](https://t.me/naukaidannye){.external target="_blank"}<script>document.getElementById(''year'').innerHTML= new Date().getFullYear();</script>'
+    right: |
+      <span class="faux-block">Powered by {{< iconify simple-icons:quarto >}} [Quarto](https://quarto.org/){.external target="_blank"} | [![Netlify Status](https://api.netlify.com/api/v1/badges/c170d383-5891-4db7-a017-03d75026b5cd/deploy-status)](https://app.netlify.com/sites/rsources/deploys){.external target="_blank"}</span>
+
+  date: today
+  author: "Evgeny Materov"
+  # toc-depth: 2
+  # toc-title: Разделы
+  chapters:
+    - index.qmd
+    - blogs.qmd
+    - part: "Books and Resources"
+      chapters:
+        - books/books-Hadley.qmd
+        - books/books-english.qmd
+        - books/books-ML.qmd
+        - books/books-geo.qmd
+        - books/books-statistics.qmd
+        - books/books-DL.qmd
+        - books/books-time-series.qmd
+        - books/books-texts.qmd
+        - books/books-economics.qmd
+        - books/books-russian.qmd
+    - courses.qmd
+    - part: "Data Visualization"
+      chapters: 
+        - dataviz/ggplot2.qmd
+        - dataviz/palettes.qmd
+    - part: "Challenges and social projects"
+      chapters: 
+        - chellendges/TidyTuesday.qmd
+        - chellendges/30DayMapChallenge.qmd
+        - chellendges/30DayChartChallenge.qmd
+        - chellendges/DuboisChallenge.qmd
+        - chellendges/AdventofCode.qmd
+    - part: "Quarto"
+      chapters: 
+        - quarto/quarto-links.qmd
+        - quarto/quarto-storytelling.qmd
+    - part: "Useful links"
+      chapters: 
+        - links/useful-links.qmd
+        - links/rsearch.qmd
+    - videoblogs.qmd
+    - datasets.qmd
+    - misc.qmd
+
+format:
+  html:
+    theme: 
+      light: [cosmo, theme_book.scss]
+    number-sections: false
+
+# filters:
+#   - auto-dark
+
+lang: en
+
+language:
+  title-block-published: "Last updated"
+

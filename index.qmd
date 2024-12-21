@@ -1,0 +1,16 @@
+---
+title: "Welcome!"
+# subtitle: "“*Wenn du eine weise Antwort verlangst, musst du vernünftig fragen*.” <br>— Johann Wolfgang von Goethe."
+---
+# Want to add a resource? {#howto}
+
+Here is a collection of *Data Science* resources on the **R** programming language and beyond.
+
+If you want to contribute, see a typo or have any questions, please open an *issue* or a *pull request* at the {{< fa brands github >}} [repository](https://github.com/materov/rsources-book){.external target="_blank"}. 
+
+<!-- Если вы хотите, чтобы ваша ссылка появилась на веб-странице **Rесурсы**, предложить сделать новый раздел или заметили опечатку, можно создать *issue* или *pull request* в {{< fa brands github >}} [репозитории](https://github.com/materov/rsources-book){.external target="_blank"}. -->
+
+<!-- ::: {.callout-warning appearance="simple" icon=false}
+Данный ресурс не является полной энциклопедией по языку **R**!
+::: -->
+
