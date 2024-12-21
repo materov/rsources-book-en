@@ -1,0 +1,78 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome!",
+    "section": "",
+    "text": "Want to add a resource?\nHere is a collection of Data Science resources on the R programming language and beyond.\nIf you want to contribute, see a typo or have any questions, please open an issue or a pull request at the  repository.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome!</span>"
+    ]
+  },
+  {
+    "objectID": "books/books-statistics.html",
+    "href": "books/books-statistics.html",
+    "title": "Statistics",
+    "section": "",
+    "text": "A random quote from statquotes on topics related to statistics:\n\nYou cannot feed the hungry on statistics. – David Lloyd George",
+    "crumbs": [
+      "Books and Resources",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "chellendges/TidyTuesday.html",
+    "href": "chellendges/TidyTuesday.html",
+    "title": "TidyTuesday",
+    "section": "",
+    "text": "TidyTuesday is a social weekly information project that is aimed at the R ecosystem. Every week, a raw data set, a small accompanying chart and an article with a description are published on the project’s website and on social networks. A perfect example of project visualization TidyTuesday is the dashboard made by Nicola Rennie.",
+    "crumbs": [
+      "Challenges and social projects",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>TidyTuesday</span>"
+    ]
+  },
+  {
+    "objectID": "chellendges/30DayMapChallenge.html",
+    "href": "chellendges/30DayMapChallenge.html",
+    "title": "30DayMapChallenge",
+    "section": "",
+    "text": "30DayMapChallenge is a daily social mapping project that takes place every November. The idea is to create maps on different topics every day in November and post the maps on designated days on social media. You don’t need to register anywhere to participate, and there are no restrictions on the tools, technologies, or data that you use in your maps.",
+    "crumbs": [
+      "Challenges and social projects",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>30DayMapChallenge</span>"
+    ]
+  },
+  {
+    "objectID": "chellendges/30DayChartChallenge.html",
+    "href": "chellendges/30DayChartChallenge.html",
+    "title": "30DayChartChallenge",
+    "section": "",
+    "text": "30DayChartChallenge is a monthly community challenge centered around data visualization.",
+    "crumbs": [
+      "Challenges and social projects",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>30DayChartChallenge</span>"
+    ]
+  },
+  {
+    "objectID": "chellendges/DuboisChallenge.html",
+    "href": "chellendges/DuboisChallenge.html",
+    "title": "DuboisChallenge",
+    "section": "",
+    "text": "W. E. B. Du Bois is an American sociologist, socialist, historian and fighter for the civil rights of the black population, he was the first African American to receive a doctorate. Starting 2021, the goal of the Dubois Visualization Challenge was to celebrate his data visualization legacy by recreating the visualizations showcased at the 1900 Paris Exposition using modern tools. The original works are recognizable, they contrast the lives of white and black Americans of that time, the drawings are hand-drawn, but carefully and accurately.",
+    "crumbs": [
+      "Challenges and social projects",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>DuboisChallenge</span>"
+    ]
+  },
+  {
+    "objectID": "chellendges/AdventofCode.html",
+    "href": "chellendges/AdventofCode.html",
+    "title": "Advent of Code",
+    "section": "",
+    "text": "Every year since 2015 Eric Wastl publishes Advent of Code — a list of daily programming problems. It doesn’t take much skill to solve these software puzzles. However, people use them as preparation for an interview, studying at a company, speed competitions, or just to challenge each other.",
+    "crumbs": [
+      "Challenges and social projects",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Advent of Code</span>"
+    ]
+  }
+]
