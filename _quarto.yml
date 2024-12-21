@@ -34,7 +34,7 @@ book:
   page-footer: 
     left: '© {{< now year >}} &#10072; Evgeny Materov &#10072; {{< fa brands telegram >}} Telegram [Наука и данные](https://t.me/naukaidannye){.external target="_blank"}<script>document.getElementById(''year'').innerHTML= new Date().getFullYear();</script>'
     right: |
-      <span class="faux-block">Powered by {{< iconify simple-icons:quarto >}} [Quarto](https://quarto.org/){.external target="_blank"} | [![Netlify Status](https://api.netlify.com/api/v1/badges/e9d20f2d-79e0-43e1-9ffc-cb7037353e1e/deploy-status)](https://app.netlify.com/sites/rsources-en/deploys){.external target="_blank"}</span>
+      <span class="faux-block">Powered by {{< iconify simple-icons:quarto >}} [Quarto](https://quarto.org/){.external target="_blank"} | [![Netlify Status](https://api.netlify.com/api/v1/badges/79c7d154-cf6f-4e45-b0fb-54b5aa31797b/deploy-status)](https://app.netlify.com/sites/rsources-en/deploys){.external target="_blank"}</span>
 
   date: today
   author: "Evgeny Materov"

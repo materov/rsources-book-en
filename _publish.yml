@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: 79c7d154-cf6f-4e45-b0fb-54b5aa31797b
+      url: https://fancy-pastelito-ed107b.netlify.app
