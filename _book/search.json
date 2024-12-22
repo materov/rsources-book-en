@@ -14,7 +14,7 @@
     "href": "books/books-statistics.html",
     "title": "Statistics",
     "section": "",
-    "text": "A random quote from statquotes on topics related to statistics:\n\nIt has been widely felt, probably for thirty years and more, that significance tests are overemphasized and often misused and that more emphasis should be put on estimation and prediction. While such a shift of emphasis does seem to be occurring, for example in medical statistics, the continued very extensive use of significance tests is on the one hand alarming and on the other evidence that they are aimed, even if imperfectly, at some widely felt need. – David R. Cox, Some general aspects of the theory of statistics. 1986. International Statistical Review 54: 117-126.",
+    "text": "A random quote from statquotes on topics related to statistics:\n\nIn the design of experiments, one has to use some informal prior knowledge. How does one construct blocks in a block design problem for instance? It is stupid to think that use is not made of a prior. But knowing that this prior is utterly casual, it seems ludicrous to go through a lot of integration, etc., to obtain ‘exact’ posterior probabilities resulting from this prior. So, I believe the situation with respect to Bayesian inference and with respect to inference, in general, has not made progress. Well, Bayesian statistics has led to a great deal of theoretical research. But I don’t see any real utilizations in applications, you know. Now no one, as far as I know, has examined the question of whether the inferences that are obtained are, in fact, realized in the predictions that they are used to make. – Oscar Kempthorne, “A conversation with Oscar Kempthorne”, Statistical Science, 1995, V 10, p. 334.",
     "crumbs": [
       "Books and Resources",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Statistics</span>"
@@ -56,12 +56,12 @@
   {
     "objectID": "chellendges/DuboisChallenge.html",
     "href": "chellendges/DuboisChallenge.html",
-    "title": "DuboisChallenge",
+    "title": "DuBois Challenge",
     "section": "",
     "text": "W. E. B. Du Bois is an American sociologist, socialist, historian and fighter for the civil rights of the black population, he was the first African American to receive a doctorate. Starting 2021, the goal of the Dubois Visualization Challenge was to celebrate his data visualization legacy by recreating the visualizations showcased at the 1900 Paris Exposition using modern tools. The original works are recognizable, they contrast the lives of white and black Americans of that time, the drawings are hand-drawn, but carefully and accurately.",
     "crumbs": [
       "Challenges and social projects",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>DuboisChallenge</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>DuBois Challenge</span>"
     ]
   },
   {

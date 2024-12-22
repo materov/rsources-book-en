@@ -1,5 +1,5 @@
 ---
-title: "DuboisChallenge"
+title: "DuBois Challenge"
 ---
 
 ::: {.column-page-inset-right}

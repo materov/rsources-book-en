@@ -1,5 +1,5 @@
 ---
-title: "R and Data Science books"
+title: "R and Data Science"
 ---
 
 ```{r setup}
