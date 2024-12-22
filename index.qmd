@@ -4,7 +4,7 @@ title: "Welcome!"
 ---
 # Want to add a resource? {#howto}
 
-Here is a collection of *Data Science* resources on the **R** programming language and beyond.
+Discover a curated collection of *Data Science* resources focused on **R** programming language and more.
 
 If you want to contribute, see a typo or have any questions, please open an *issue* or a *pull request* at the {{< fa brands github >}} [repository](https://github.com/materov/rsources-book){.external target="_blank"}. 
 

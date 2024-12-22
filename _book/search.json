@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Welcome!",
     "section": "",
-    "text": "Want to add a resource?\nHere is a collection of Data Science resources on the R programming language and beyond.\nIf you want to contribute, see a typo or have any questions, please open an issue or a pull request at the  repository.",
+    "text": "Want to add a resource?\nDiscover a curated collection of Data Science resources focused on R programming language and more.\nIf you want to contribute, see a typo or have any questions, please open an issue or a pull request at the  repository.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome!</span>"
     ]
@@ -14,7 +14,7 @@
     "href": "books/books-statistics.html",
     "title": "Statistics",
     "section": "",
-    "text": "A random quote from statquotes on topics related to statistics:\n\nEven properly done statistics can’t be trusted. The plethora of available statistical techniques and analyses grants researchers an enormous amount of freedom when analyzing their data, and it is trivially easy to ‘torture the data until it confesses’. – Alex Reinhart, Statistics Done Wrong: The Woefully Complete Guide, 2015",
+    "text": "A random quote from statquotes on topics related to statistics:\n\nIt has been widely felt, probably for thirty years and more, that significance tests are overemphasized and often misused and that more emphasis should be put on estimation and prediction. While such a shift of emphasis does seem to be occurring, for example in medical statistics, the continued very extensive use of significance tests is on the one hand alarming and on the other evidence that they are aimed, even if imperfectly, at some widely felt need. – David R. Cox, Some general aspects of the theory of statistics. 1986. International Statistical Review 54: 117-126.",
     "crumbs": [
       "Books and Resources",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Statistics</span>"
