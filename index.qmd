@@ -6,7 +6,7 @@ title: "Welcome!"
 
 Discover a curated collection of *Data Science* resources focused on **R** programming language and more.
 
-If you want to contribute, see a typo or have any questions, please open an *issue* or a *pull request* at the {{< fa brands github >}} [repository](https://github.com/materov/rsources-book){.external target="_blank"}. 
+If you want to contribute, see a typo or have any questions, please open an *issue* or a *pull request* at the {{< fa brands github >}} [repository](https://github.com/materov/rsources-book-en/){.external target="_blank"}. 
 
 <!-- Если вы хотите, чтобы ваша ссылка появилась на веб-странице **Rесурсы**, предложить сделать новый раздел или заметили опечатку, можно создать *issue* или *pull request* в {{< fa brands github >}} [репозитории](https://github.com/materov/rsources-book){.external target="_blank"}. -->
 
