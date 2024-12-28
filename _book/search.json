@@ -14,7 +14,7 @@
     "href": "books/books-statistics.html",
     "title": "Statistics",
     "section": "",
-    "text": "A random quote from statquotes on topics related to statistics:\n\nWhen a Fisherian null hypothesis is rejected with an associated probability of, for example, .026, it is not the case that the probability that the null hypothesis is true is .026 (or less than .05, or any other value we can specify). Given our framework of probability as long-run relative frequency–as much as we might wish it to be otherwise–this result does not tell us about the truth of the null hypothesis, given the data. (For this we have to go to Bayesian or likelihood statistics, in which probability is not relative frequency but degree of belief. – Jacob Cohen, Things I have learned (so far), 1990. American Psychologist 45: 1304-1312.",
+    "text": "A random quote from statquotes on topics related to statistics:\n\nThe standard error of most statistics is proportional to 1 over the square root of the sample size. God did this, and there is nothing we can do to change it. – Howard Wainer, Improving Tabular Displays, With NAEP Tables as Examples and Inspirations, Journal of Educational and Behavioral Statistics, Vol 22, No. 1, pp. 1-30.",
     "crumbs": [
       "Books and Resources",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Statistics</span>"
