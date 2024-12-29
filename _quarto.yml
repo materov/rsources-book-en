@@ -1,6 +1,7 @@
-project:
-  type: book
-  preview:
+project: 
+  type: book 
+  
+  preview: 
     port: 1111
 
 execute:
@@ -12,7 +13,7 @@ website:
     icon: bookmarks
     dismissable: false
     position: below-navbar
-    type: light
+    type: primary
 
 book:
   title: "RSources"
@@ -23,14 +24,14 @@ book:
   repo-actions: [issue]
   sidebar:
       collapse-level: 1
-  navbar:
-    # right:
-    #   - icon: telegram
-    #     href: https://t.me/naukaidannye
-    #     text: "канал Наука и данные"
-    background: "#2860a1"
-    #collapse-below: lg
-    logo: logo.jpeg
+  # navbar:
+    # # right:
+    # #   - icon: telegram
+    # #     href: https://t.me/naukaidannye
+    # #     text: "канал Наука и данные"
+    # background: "#2860a1"
+    # #collapse-below: lg
+    # ogo: logo.jpeg
   page-footer: 
     left: '© {{< now year >}} &#10072; Evgeny Materov &#10072; {{< fa brands telegram >}} Telegram [Наука и данные](https://t.me/naukaidannye){.external target="_blank"}<script>document.getElementById(''year'').innerHTML= new Date().getFullYear();</script>'
     right: |
@@ -84,6 +85,7 @@ format:
     theme: 
       light: [cosmo, theme_book.scss]
     number-sections: false
+    include-after-body: [collapse_button.html]
 
 # filters:
 #   - auto-dark

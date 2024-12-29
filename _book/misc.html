@@ -40,16 +40,16 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-4cdebec6b739b57af1aedabbcef8f840.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-fcf4d6247ddf9866121f695e5b1b78e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script src="site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -83,26 +83,10 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./logo.jpeg" alt="" class="navbar-logo">
-    </a>
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">RSources</span>
-    </a>
-  </div>
-        <div class="quarto-navbar-tools tools-end">
-    <a href="https://github.com/materov/rsources-book-en/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-</div>
-          <div id="quarto-search" class="" title="Search"></div>
-      </div> <!-- /container-fluid -->
-    </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -111,16 +95,32 @@ ul.task-list li input[type="checkbox"] {
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./misc.html"><span class="chapter-title">Sorts of things</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
     </div>
   </nav>
-  <div id="quarto-announcement" data-announcement-id="046c339fdc050e5d277e306e025b1928" class="alert alert-light hidden"><i class="bi bi-bookmarks quarto-announcement-icon"></i><div class="quarto-announcement-content">
+  <div id="quarto-announcement" data-announcement-id="046c339fdc050e5d277e306e025b1928" class="alert alert-primary hidden"><i class="bi bi-bookmarks quarto-announcement-icon"></i><div class="quarto-announcement-content">
 <p>useful links to Data Science and R resources</p>
 </div></div>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">RSources</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/materov/rsources-book-en/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -346,8 +346,8 @@ ul.task-list li input[type="checkbox"] {
 <div class="column-page-inset-right">
 <div class="cell">
 <div class="cell-output-display">
-<div class="reactable html-widget html-fill-item" id="htmlwidget-601c50713774efbcdd93" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-601c50713774efbcdd93">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"title":["Allison Marie Horst","A very tidy advent 2022","Base graphics in R","Useless R Functions","RStudio IDE User Guide","Base R shortcuts","A worthy collection of short R commands and tricks","Data Science Learning Community","The R Manuals"],"text":["Data Science illustrations","25 days of tidyverse and r-lib functions, tips, and tricks, by Mara Averic","basic graphics in R","a repository with a set of useful or, as you look at it, useless, and sometimes funny functions using R","a page with a guide containing screenshots and comprehensive descriptions of the interface and working with RStudio Desktop","a collection of not-so-well-known, but attention-focused idioms and abbreviations for writing short and fast basic code","a collection of R-commands and tricks, by LW Pembleton","the DSLC community holds regular online meetings, organizing \"book clubs\" for the passage of various books for R and Python on Data Science and ML","R guidelines"],"link":["https://allisonhorst.com/data-science-art","https://mara.quarto.pub/tidy-advent-2022/","https://poisonalien.github.io/basegraphics/index.html","https://github.com/tomaztk/Useless_R_functions","https://docs.posit.co/ide/user/","https://github.com/nanxstats/r-base-shortcuts","https://lpembleton.rbind.io/ramblings/R/","https://dslc.io/","https://rstudio.github.io/r-manuals/"]},"columns":[{"id":"title","name":"Resource","type":"character","vAlign":"center","sortable":false,"resizable":true,"cell":[{"name":"div","attribs":{},"children":[{"name":"div","attribs":{"style":{"font-weight":"800"}},"children":["Allison Marie Horst"]},{"name":"div","attribs":{"style":{"font-size":"0.95rem"}},"children":["Data Science illustrations"]}]},{"name":"div","attribs":{},"children":[{"name":"div","attribs":{"style":{"font-weight":"800"}},"children":["A very tidy advent 2022"]},{"name":"div","attribs":{"style":{"font-size":"0.95rem"}},"children":["25 days of tidyverse and r-lib functions, tips, and tricks, by Mara Averic"]}]},{"name":"div","attribs":{},"children":[{"name":"div","attribs":{"style":{"font-weight":"800"}},"children":["Base graphics in R"]},{"name":"div","attribs":{"style":{"font-size":"0.95rem"}},"children":["basic graphics in R"]}]},{"name":"div","attribs":{},"children":[{"name":"div","attribs":{"style":{"font-weight":"800"}},"children":["Useless R Functions"]},{"name":"div","attribs":{"style":{"font-size":"0.95rem"}},"children":["a repository with a set of useful or, as you look at it, useless, and sometimes funny functions using R"]}]},{"name":"div","attribs":{},"children":[{"name":"div","attribs":{"style":{"font-weight":"800"}},"children":["RStudio IDE User Guide"]},{"name":"div","attribs":{"style":{"font-size":"0.95rem"}},"children":["a page with a guide containing screenshots and comprehensive descriptions of the interface and working with RStudio Desktop"]}]},{"name":"div","attribs":{},"children":[{"name":"div","attribs":{"style":{"font-weight":"800"}},"children":["Base R shortcuts"]},{"name":"div","attribs":{"style":{"font-size":"0.95rem"}},"children":["a collection of not-so-well-known, but attention-focused idioms and abbreviations for writing short and fast basic code"]}]},{"name":"div","attribs":{},"children":[{"name":"div","attribs":{"style":{"font-weight":"800"}},"children":["A worthy collection of short R commands and tricks"]},{"name":"div","attribs":{"style":{"font-size":"0.95rem"}},"children":["a collection of R-commands and tricks, by LW Pembleton"]}]},{"name":"div","attribs":{},"children":[{"name":"div","attribs":{"style":{"font-weight":"800"}},"children":["Data Science Learning Community"]},{"name":"div","attribs":{"style":{"font-size":"0.95rem"}},"children":["the DSLC community holds regular online meetings, organizing \"book clubs\" for the passage of various books for R and Python on Data Science and ML"]}]},{"name":"div","attribs":{},"children":[{"name":"div","attribs":{"style":{"font-weight":"800"}},"children":["The R Manuals"]},{"name":"div","attribs":{"style":{"font-size":"0.95rem"}},"children":["R guidelines"]}]}]},{"id":"text","name":"text","type":"character","vAlign":"center","show":false},{"id":"link","name":"Link","type":"character","vAlign":"center","sortable":false,"cell":["<a href=\"https://allisonhorst.com/data-science-art\" target=\"_blank\">https://allisonhorst.com/data-science-art<\/a>","<a href=\"https://mara.quarto.pub/tidy-advent-2022/\" target=\"_blank\">https://mara.quarto.pub/tidy-advent-2022/<\/a>","<a href=\"https://poisonalien.github.io/basegraphics/index.html\" target=\"_blank\">https://poisonalien.github.io/basegraphics/index.html<\/a>","<a href=\"https://github.com/tomaztk/Useless_R_functions\" target=\"_blank\">https://github.com/tomaztk/Useless_R_functions<\/a>","<a href=\"https://docs.posit.co/ide/user/\" target=\"_blank\">https://docs.posit.co/ide/user/<\/a>","<a href=\"https://github.com/nanxstats/r-base-shortcuts\" target=\"_blank\">https://github.com/nanxstats/r-base-shortcuts<\/a>","<a href=\"https://lpembleton.rbind.io/ramblings/R/\" target=\"_blank\">https://lpembleton.rbind.io/ramblings/R/<\/a>","<a href=\"https://dslc.io/\" target=\"_blank\">https://dslc.io/<\/a>","<a href=\"https://rstudio.github.io/r-manuals/\" target=\"_blank\">https://rstudio.github.io/r-manuals/<\/a>"],"html":true}],"searchable":true,"defaultPageSize":15,"highlight":true,"theme":{"headerStyle":{"&:hover[aria-sort]":{"background":"hsl(0, 0%, 96%)"},"&[aria-sort='ascending'], &[aria-sort='descending']":{"background":"hsl(0, 0%, 96%)"},"borderColor":"#555"}},"dataKey":"b91291dd1ff02cf80f733af2ec3a4a9c"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-bcdc6ed1b922eca97a6f" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-bcdc6ed1b922eca97a6f">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"title":["Allison Marie Horst","A very tidy advent 2022","Base graphics in R","Useless R Functions","RStudio IDE User Guide","Base R shortcuts","A worthy collection of short R commands and tricks","Data Science Learning Community","The R Manuals"],"text":["Data Science illustrations","25 days of tidyverse and r-lib functions, tips, and tricks, by Mara Averic","basic graphics in R","a repository with a set of useful or, as you look at it, useless, and sometimes funny functions using R","a page with a guide containing screenshots and comprehensive descriptions of the interface and working with RStudio Desktop","a collection of not-so-well-known, but attention-focused idioms and abbreviations for writing short and fast basic code","a collection of R-commands and tricks, by LW Pembleton","the DSLC community holds regular online meetings, organizing \"book clubs\" for the passage of various books for R and Python on Data Science and ML","R guidelines"],"link":["https://allisonhorst.com/data-science-art","https://mara.quarto.pub/tidy-advent-2022/","https://poisonalien.github.io/basegraphics/index.html","https://github.com/tomaztk/Useless_R_functions","https://docs.posit.co/ide/user/","https://github.com/nanxstats/r-base-shortcuts","https://lpembleton.rbind.io/ramblings/R/","https://dslc.io/","https://rstudio.github.io/r-manuals/"]},"columns":[{"id":"title","name":"Resource","type":"character","vAlign":"center","sortable":false,"resizable":true,"cell":[{"name":"div","attribs":{},"children":[{"name":"div","attribs":{"style":{"font-weight":"800"}},"children":["Allison Marie Horst"]},{"name":"div","attribs":{"style":{"font-size":"0.95rem"}},"children":["Data Science illustrations"]}]},{"name":"div","attribs":{},"children":[{"name":"div","attribs":{"style":{"font-weight":"800"}},"children":["A very tidy advent 2022"]},{"name":"div","attribs":{"style":{"font-size":"0.95rem"}},"children":["25 days of tidyverse and r-lib functions, tips, and tricks, by Mara Averic"]}]},{"name":"div","attribs":{},"children":[{"name":"div","attribs":{"style":{"font-weight":"800"}},"children":["Base graphics in R"]},{"name":"div","attribs":{"style":{"font-size":"0.95rem"}},"children":["basic graphics in R"]}]},{"name":"div","attribs":{},"children":[{"name":"div","attribs":{"style":{"font-weight":"800"}},"children":["Useless R Functions"]},{"name":"div","attribs":{"style":{"font-size":"0.95rem"}},"children":["a repository with a set of useful or, as you look at it, useless, and sometimes funny functions using R"]}]},{"name":"div","attribs":{},"children":[{"name":"div","attribs":{"style":{"font-weight":"800"}},"children":["RStudio IDE User Guide"]},{"name":"div","attribs":{"style":{"font-size":"0.95rem"}},"children":["a page with a guide containing screenshots and comprehensive descriptions of the interface and working with RStudio Desktop"]}]},{"name":"div","attribs":{},"children":[{"name":"div","attribs":{"style":{"font-weight":"800"}},"children":["Base R shortcuts"]},{"name":"div","attribs":{"style":{"font-size":"0.95rem"}},"children":["a collection of not-so-well-known, but attention-focused idioms and abbreviations for writing short and fast basic code"]}]},{"name":"div","attribs":{},"children":[{"name":"div","attribs":{"style":{"font-weight":"800"}},"children":["A worthy collection of short R commands and tricks"]},{"name":"div","attribs":{"style":{"font-size":"0.95rem"}},"children":["a collection of R-commands and tricks, by LW Pembleton"]}]},{"name":"div","attribs":{},"children":[{"name":"div","attribs":{"style":{"font-weight":"800"}},"children":["Data Science Learning Community"]},{"name":"div","attribs":{"style":{"font-size":"0.95rem"}},"children":["the DSLC community holds regular online meetings, organizing \"book clubs\" for the passage of various books for R and Python on Data Science and ML"]}]},{"name":"div","attribs":{},"children":[{"name":"div","attribs":{"style":{"font-weight":"800"}},"children":["The R Manuals"]},{"name":"div","attribs":{"style":{"font-size":"0.95rem"}},"children":["R guidelines"]}]}]},{"id":"text","name":"text","type":"character","vAlign":"center","show":false},{"id":"link","name":"Link","type":"character","vAlign":"center","sortable":false,"cell":["<a href=\"https://allisonhorst.com/data-science-art\" target=\"_blank\">https://allisonhorst.com/data-science-art<\/a>","<a href=\"https://mara.quarto.pub/tidy-advent-2022/\" target=\"_blank\">https://mara.quarto.pub/tidy-advent-2022/<\/a>","<a href=\"https://poisonalien.github.io/basegraphics/index.html\" target=\"_blank\">https://poisonalien.github.io/basegraphics/index.html<\/a>","<a href=\"https://github.com/tomaztk/Useless_R_functions\" target=\"_blank\">https://github.com/tomaztk/Useless_R_functions<\/a>","<a href=\"https://docs.posit.co/ide/user/\" target=\"_blank\">https://docs.posit.co/ide/user/<\/a>","<a href=\"https://github.com/nanxstats/r-base-shortcuts\" target=\"_blank\">https://github.com/nanxstats/r-base-shortcuts<\/a>","<a href=\"https://lpembleton.rbind.io/ramblings/R/\" target=\"_blank\">https://lpembleton.rbind.io/ramblings/R/<\/a>","<a href=\"https://dslc.io/\" target=\"_blank\">https://dslc.io/<\/a>","<a href=\"https://rstudio.github.io/r-manuals/\" target=\"_blank\">https://rstudio.github.io/r-manuals/<\/a>"],"html":true}],"searchable":true,"defaultPageSize":15,"highlight":true,"theme":{"headerStyle":{"&:hover[aria-sort]":{"background":"hsl(0, 0%, 96%)"},"&[aria-sort='ascending'], &[aria-sort='descending']":{"background":"hsl(0, 0%, 96%)"},"borderColor":"#555"}},"dataKey":"b91291dd1ff02cf80f733af2ec3a4a9c"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -355,6 +355,33 @@ ul.task-list li input[type="checkbox"] {
 
 
 </main> <!-- /main -->
+<!-- collapse buttons -->
+<script>
+  var container = document.querySelector(".sidebar-title");
+  var button = document.createElement("button");
+  button.style.border = "none";
+  button.style.backgroundColor = "unset";
+  var icon = document.createElement("i");
+  icon.classList = "bi bi-arrows-expand";
+  button.appendChild(icon);
+
+  button.onclick = onbuttonclicked;
+  container.appendChild(button);
+
+  function onbuttonclicked() {
+    if (icon.classList == "bi bi-arrows-expand") {
+      document.querySelectorAll(
+        "a.sidebar-item-toggle.collapsed"
+      ).forEach((x) => x.click());
+      icon.classList = "bi bi-arrows-collapse";
+    } else {
+      document.querySelectorAll(
+        "a.sidebar-item-toggle:not(.collapsed)"
+      ).forEach((x) => x.click());
+      icon.classList = "bi bi-arrows-expand";
+    }
+  }
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
