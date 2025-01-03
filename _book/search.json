@@ -14,7 +14,7 @@
     "href": "books/books-statistics.html",
     "title": "Statistics",
     "section": "",
-    "text": "A random quote from statquotes on topics related to statistics:\n\nThus statistics should generally be taught more as a practical subject with analyses of real data. Of course some theory and an appropriate range of statistical tools need to be learnt, but students should be taught that Statistics is much more than a collection of standard prescriptions. – C. Chatfield, The initial examination of data, 1985. Journal of the Royal Statistical Society, Series A 148: 214-253.",
+    "text": "A random quote from statquotes on topics related to statistics:\n\nFrequentist statistics assumes that there is a ‘true’ state of the world (e.g. the difference between species in predation probability) which gives rise to a distribution of possible experimental outcomes. The Bayesian framework says instead that the experimental outcome - what we actually saw happen - is the truth, while the parameter values or hypotheses have probability distributions. The Bayesian framework solves many of the conceptual problems of frequentist statistics: answers depend on what we actually saw and not on a range of hypothetical outcomes, and we can legitimately make statements about the probability of different hypotheses or parameter values. – Ben Bolker, Ecological Models and Data in R, 2007",
     "crumbs": [
       "Books and Resources",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Statistics</span>"
