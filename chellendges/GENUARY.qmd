@@ -55,7 +55,7 @@ library(readxl)
 # )
 ```
 
-**GENUARY** is an artificially generated month of time where we build code that makes beautiful things. It happens throughout January at [genuary.art](https://genuary.art/){target="_blank"}. Share your work on all the social media sites at once tagged with *#genuary*. There's a new [prompt](https://genuary.art/prompts){target="_blank"} each day, and everybody is invited!
+**GENUARY** is an artificially generated month of time where we build code that makes beautiful things. It happens throughout January at [genuary.art](https://genuary.art/){target="_blank"}. Share your work on all the social media sites at once tagged with **#genuary**. There's a new [prompt](https://genuary.art/prompts){target="_blank"} each day, and everybody is invited!
 
 ```{r}
 #| echo: false
