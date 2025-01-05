@@ -87,12 +87,12 @@ reactable(
       maxWidth = 300,
       sortable = FALSE,
       resizable = TRUE,
-      name = "Автор"
+      name = "Author"
     ),
     link = colDef(
       #searchable = FALSE,
       sortable = FALSE,
-      name = "Ссылка",
+      name = "Link",
       html = TRUE, 
       cell = function(value, index) {
       sprintf('<a href="%s" target="_blank">%s</a>', The30DayMapChallenge$link[index], value)

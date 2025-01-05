@@ -80,7 +80,7 @@ reactable(
   columns = list( 
     link = colDef(show = FALSE),
     title = colDef(
-      name = "Название",
+      name = "Link",
       sortable = FALSE,
       html = TRUE, 
       cell = function(value, index) {
@@ -93,7 +93,7 @@ reactable(
       cell = function(value) {
         div(class = "authors", value)
       },
-      name = "Автор"
+      name = "Author"
       #maxWidth = 240
     )
   ),

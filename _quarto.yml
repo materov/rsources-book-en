@@ -67,6 +67,7 @@ book:
         - chellendges/30DayMapChallenge.qmd
         - chellendges/30DayChartChallenge.qmd
         - chellendges/DuboisChallenge.qmd
+        - chellendges/GENUARY.qmd
         - chellendges/AdventofCode.qmd
     - part: "Quarto"
       chapters: 

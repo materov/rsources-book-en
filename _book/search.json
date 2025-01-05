@@ -14,7 +14,7 @@
     "href": "books/books-statistics.html",
     "title": "Statistics",
     "section": "",
-    "text": "A random quote from statquotes on topics related to statistics:\n\nDoing applied statistics is never easy, especially if you want to get it right. – Xiao-Li Meng, 2005 Joint Statistical Meetings",
+    "text": "A random quote from statquotes on topics related to statistics:\n\nThe old rule of trusting the Central Limit Theorem if the sample size is larger than 30 is just that–old. Bootstrap and permutation testing let us more easily do inferences for a wider variety of statistics. – Tim Hesterberg",
     "crumbs": [
       "Books and Resources",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Statistics</span>"
@@ -65,6 +65,17 @@
     ]
   },
   {
+    "objectID": "chellendges/GENUARY.html",
+    "href": "chellendges/GENUARY.html",
+    "title": "GENUARY",
+    "section": "",
+    "text": "GENUARY is an artificially generated month of time where we build code that makes beautiful things. It happens throughout January at genuary.art. Share your work on all the social media sites at once tagged with #genuary. There’s a new prompt each day, and everybody is invited!",
+    "crumbs": [
+      "Challenges and social projects",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>GENUARY</span>"
+    ]
+  },
+  {
     "objectID": "chellendges/AdventofCode.html",
     "href": "chellendges/AdventofCode.html",
     "title": "Advent of Code",
@@ -72,7 +83,7 @@
     "text": "Every year since 2015 Eric Wastl publishes Advent of Code — a list of daily programming problems. It doesn’t take much skill to solve these software puzzles. However, people use them as preparation for an interview, studying at a company, speed competitions, or just to challenge each other.",
     "crumbs": [
       "Challenges and social projects",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Advent of Code</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Advent of Code</span>"
     ]
   }
 ]

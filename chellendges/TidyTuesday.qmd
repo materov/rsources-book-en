@@ -86,12 +86,12 @@ reactable(
       #searchable = TRUE,
       sortable = FALSE,
       resizable = TRUE,
-      name = "Автор"
+      name = "Author"
     ),
     link = colDef(
       #searchable = FALSE,
       sortable = FALSE,
-      name = "Ссылка",
+      name = "Link",
       html = TRUE, 
       cell = function(value, index) {
       sprintf('<a href="%s" target="_blank">%s</a>', TidyTuesday$link[index], value)
