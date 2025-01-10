@@ -14,7 +14,7 @@
     "href": "books/books-statistics.html",
     "title": "Statistics",
     "section": "",
-    "text": "A random quote from statquotes on topics related to statistics:\n\nWhen [the profession of] statistics becomes clearly embedded in people’s minds as being concerned with investigation* rather than simply calculation (or worse still, mere cataloguing of data), there can be no room for doubts about the relevance of the subject.* – C. J. Wild, Embracing the ‘Wider view’ of Statistics, The American Statistician, 48, 163-171. p. 165.",
+    "text": "A random quote from statquotes on topics related to statistics:\n\nWhen looking at the end result of any statistical analysis, one must be very cautious not to over interpret the data. Care must be taken to know the size of the sample, and to be certain the method for gathering information is consistent with other samples gathered. […] No one should ever base conclusions without knowing the size of the sample and how random a sample it was. But all too often such data is not mentioned when the statistics are given - perhaps it is overlooked or even intentionally omitted. – Theoni Pappas, “More Joy of Mathematics: Exploring mathematical insights & concepts”, 1994",
     "crumbs": [
       "Books and Resources",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Statistics</span>"
