@@ -14,7 +14,7 @@
     "href": "books/books-statistics.html",
     "title": "Statistics",
     "section": "",
-    "text": "A random quote from statquotes on topics related to statistics:\n\n[Statistics] is both a science and an art. It is a science in that its methods are basically systematic and have general application; and an art in that their successful application depends to a considerable degree on the skill and special experience of the statistician, and on his knowledge of the field of application, e.g. economics. – Leonard H C Tippett, Statistics, 1943",
+    "text": "A random quote from statquotes on topics related to statistics:\n\nThis reminds me of the duality in statistics between computation and model fit: better-fitting models tend to be easier to compute, and computational problems often signal modeling problems. and ‘The Black Swan’. Law, Probability and Risk (2008) 7, 151-163. – Andrew Gelman, Thoughts inspired by Nassim Taleb’s ‘Fooled by Randomness’",
     "crumbs": [
       "Books and Resources",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Statistics</span>"
